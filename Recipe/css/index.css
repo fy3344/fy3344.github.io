@@ -1,0 +1,559 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.top-bar {
+  width: 100%;
+  height: 50px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #efe0e0;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+.bottom-bar {
+  width: 100%;
+  height: 50px;
+  background: #f9f9f9;
+  border-top: 1px solid #efe0e0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.each-menu {
+  margin-right: 20px;
+  line-height: 50px;
+  border-bottom: 4px solid transparent;
+}
+
+.each-bottom-menu {
+  width: 120px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.each-bottom-menu-choose {
+  background: #e23143;
+  color: #fff;
+}
+
+.menu-choose {
+  color: red;
+  border-bottom: 4px solid red;
+}
+
+.menu-img {
+  width: 30px;
+  margin: 0 20px;
+}
+
+.card {
+  height: calc(60vh - 100px);
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.each-card {
+  width: 90%;
+  margin: 0 auto;
+  height: 13vh;
+  background: #8c9197;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 20px 10px;
+  position: relative;
+  color: #fff;
+}
+
+.each-card img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+}
+.daily,
+.food {
+  width: 100%;
+  height: calc(100vh - 100px);
+  position: relative;
+  margin-top: 50px;
+  display: none;
+}
+
+.daily .export {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+}
+
+.chart-top-title,
+.chart-bottom-title {
+  color: #7f8082;
+  position: absolute;
+  font-size: 20px;
+  z-index: 99;
+  width: 182px;
+  left: 50%;
+  margin-left: -91px;
+}
+
+.chart-top-title {
+  top: 135px;
+}
+
+.chart-bottom-title {
+  top: 230px;
+}
+
+.add-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background: #e72d45;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: -40px;
+  z-index: 99;
+}
+
+.right,
+.left {
+  width: 45%;
+  height: 100px;
+  position: relative;
+  border: 1px solid black; /*设置好外边框*/
+  display: flex;
+}
+.right-content {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 0px 0px 40px 0px;
+  background-color: white;
+}
+.left-content {
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 0px 0px 0px 40px;
+  background-color: white;
+  display: flex;
+}
+
+.add-img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.back-img {
+  width: 25px;
+  margin: 10px;
+}
+.food-type {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+.food-type img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.food-img img {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.each-type {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 15%;
+}
+
+.each-type-choose img {
+  width: 40px;
+  height: 40px;
+}
+
+.each-type-choose .type-name {
+  font-weight: bold;
+}
+
+.each-type-name {
+  color: gray;
+}
+
+.type-name-show {
+  padding-left: 10px;
+  border-left: 2px solid gray;
+  margin: 20px;
+}
+
+.type-name-bold {
+  font-weight: bold;
+  color: #000;
+}
+
+.food-img {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.each-food {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 33%;
+  margin-bottom: 10px;
+}
+
+.calendar {
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.calendar .c-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.week {
+  display: flex;
+}
+.week div,
+#date div {
+  width: 13%;
+  height: 4vh;
+  line-height: 4vh;
+  text-align: center;
+  margin-right: 1%;
+  margin-bottom: 2px;
+}
+#date div {
+  background: #b9c0ca;
+}
+#date {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-day-choose {
+  background: #05b111 !important;
+  color: #fff;
+}
+
+.c-day-none {
+  background: #fff !important;
+}
+
+.scale {
+  transform: scale(0.85);
+}
+
+#noDateWarn {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  line-height: 50px;
+  z-index: 999;
+  position: absolute;
+  width: 95%;
+  padding-left: 3%;
+  bottom: 50px;
+  left: 1%;
+}
+
+.week div {
+  height: 3vh;
+  line-height: 3vh;
+}
+
+.top-block {
+  width: 100%;
+  height: 50vh;
+  margin-top: 52px;
+  background: #8C9197;
+  position: relative;
+}
+
+.ab-block {
+  position: absolute;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  margin-left: -50px;
+  color: #fff;
+  line-height: 100px;
+  text-align: center;
+  background: #CF1516;
+  bottom: -50px;
+}
+
+.gray-block {
+  font-size: 30px;
+  color: #fff;
+}
+
+.gray-block .font {
+  width: 100%;
+  text-align: center;
+}
+
+.or {
+  width: 65%;
+  text-align: center;
+  color: #8C9197;
+  margin: 0 auto;
+  line-height: 30px;
+  margin-top: 20vh;
+}
+
+.btns {
+  width: 70%;
+  margin: 2vh auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns div {
+  width: 44%;
+  text-align: center;
+  line-height: 5vh;
+  height: 5vh;
+  background: #3D444E;
+  color: #fff;
+}
+
+/*zinan*/
+/* body {
+  font-size: 80%;
+  margin: 0;
+} */
+
+#sign-container {
+  display: none;
+}
+
+#signtitle{
+  margin-bottom: 5vh;
+  margin-left: 3vw;
+  font-family: "Lucida Console",  monospace;
+}
+
+#signsection {
+  margin-left: 26vw;
+  margin-top: 30vw;
+}
+
+label {
+  font-family: "Lucida Console",  monospace;
+  font-size: 130%;
+}
+
+#signsubmit {
+  font-family: "Lucida Console",  monospace;
+  margin-left: 10vw;
+}
+
+#signform{
+  margin-right: 25vw;
+}
+
+#back {
+  font-size: 120%;
+  border: none;
+  background: none;
+  font-family: "Lucida Console",  monospace;
+  margin-top: 2vh;
+  margin-left: 2vh;
+}
+
+/* .menunav {
+  margin-top: 8%;
+  margin-left: 10%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.menunav a {
+  float: left;
+  display: block;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 130%;
+  color: #234F6A;
+  transition-duration:1;
+  
+}
+
+.menunav a.active {
+  color:#C70039;
+  border-bottom: 3px solid #C70039;
+} */
+
+.searchbar{
+  margin-top: 13%;
+  width:80%;
+  height: 40%;
+  background-color: #F0EDE7;
+  display: flex;
+  align-items: center;
+  border-radius: 50vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  padding-left: 3vw;
+}
+
+.searchbar input{
+  width: 85%;
+  height: 10%;
+  background-color: transparent;
+  flex: 1;
+  border: none;
+  font-size: 120%;
+  
+}
+
+.searchbar button img{
+  width: 4vw;
+  margin-bottom: 1vw;
+}
+
+.searchbar button{
+  /* margin-left:90%; */
+  border: 0;
+  border-radius: 50%;
+  width: 8vw;
+  height: 8vw;
+  background: #C70039;
+}
+
+.communitybar {
+  height: 13vh;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  background-color:#E9C7CD;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.searchbox {
+  margin-top: 2%;
+}
+.post-like {
+  /* margin-top: 8%; */
+  float: right;
+  font-size: 80%;
+  font-family: "Lucida Console",  monospace;
+}
+
+.heart{
+  color: #C70039;
+  font-size: 150%;
+}
+
+.card2 {
+  margin-left: 12%;
+  margin-top: 5%;
+  margin-bottom: auto;
+  box-shadow:  0 4vw 2vw -2vw  #aaaaaa;
+}
+
+.community-btn {
+  margin-left: 35%;
+}
+
+.community-btn button {
+  background-color: #aaaaaa; 
+  border: none;
+  color: white;
+  padding: 1vw 3vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
+
+#post-btn {
+  border-bottom-left-radius: 15%;
+  border-top-left-radius: 15%;
+  background-color: #4d1c07;
+  color: white;
+}
+
+#video-btn {
+  border-bottom-right-radius: 15%;
+  border-top-right-radius: 15%;
+}
+
+#video-container {
+  display: none;
+}
+
+#backTo {
+  text-decoration: none;
+  padding-right: 2vw;
+  font-size: 180%;
+  color:white;
+  float: left;
+}
+
+.detailedPost {
+  font-family: "Lucida Console",  monospace;
+  font-size: 130%;
+  color:white;
+  display: block;
+  justify-content:left;
+}
+
+#learnbtn {
+  color: white;
+  margin-left: 25%;
+}
+
+.goLogin-btn {
+  padding: 0;
+  border: none;
+  background: none;
+}
